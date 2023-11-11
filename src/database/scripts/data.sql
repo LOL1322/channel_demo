@@ -1,0 +1,1 @@
+INSERT INTO TypesUsers(type, access_level) VALUES ('Admin', 3);
