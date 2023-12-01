@@ -15,7 +15,7 @@ class Courients(BaseModel):
     ID: int
     name: str
 
-class films(BaseModel):
+class Films(BaseModel):
     ID: int
     relyear: str
     runtime: str
@@ -29,6 +29,8 @@ class FilmsCountrie(BaseModel):
 class Accounts(BaseModel):
     ID: int
     userID:int
+    login: str
+    password: str
 
 class Peoples(BaseModel):
     ID: int

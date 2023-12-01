@@ -4,15 +4,14 @@ import sys
 
 sys.path.append('C:/channel_demo')
 
-from src.server.router import rout
+from src.server.router import routs
 import uvicorn
 import settings
 
 
 app = FastAPI(title='Films API', version='0.1 Alpha')
 
-app.include_router(router=rout)
-
+[app.include_router(rout) for rout in routs]
 
 @app.router.get(path='/')
 def index() -> RedirectResponse:
