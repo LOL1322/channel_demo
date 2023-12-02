@@ -13,7 +13,7 @@ app = FastAPI(title='Films API', version='0.1 Alpha')
 
 [app.include_router(rout) for rout in routs]
 
-@app.router.get(path='/')
+@app.get(path='/', include_in_schema=False)
 def index() -> RedirectResponse:
     return RedirectResponse('/docs')
 
